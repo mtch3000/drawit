@@ -144,6 +144,17 @@
 
   <script src="js/config.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/chat.js"></script>
+  <script>
+    // Initialise chat after Firebase is ready
+    window.addEventListener('load', function () {
+      try {
+        DrawChat.init();
+      } catch (e) {
+        console.error('Chat init failed:', e);
+      }
+    });
+  </script>
 
 </body>
 </html>
